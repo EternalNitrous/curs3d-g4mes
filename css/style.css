@@ -15,7 +15,6 @@
 	--uibg: #240046;
 	--textcolor: #fff;
 	--bg: #10002b;
-	--margin: 4rem;
 }
 .hiddenUpload {
 	display: none;
@@ -81,8 +80,8 @@ footer a,
 footer a:visited,
 header a,
 header a:visited {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
 	text-decoration: none;
 }
 
@@ -106,9 +105,6 @@ header a:hover {
     footer {
         border-radius: 0;
     }
-	* {
-		--margin: 12rem;
-	}
 }
 
 main {
@@ -120,9 +116,8 @@ main {
 	gap: 0;
 	flex-wrap: wrap;
 	margin: auto;
-	margin-top: var(--margin);
+	margin-top: 4rem;
 	width: 90%;
-	height:auto;
 }
 main#main.noscroll {
 	justify-content: center;
@@ -142,8 +137,6 @@ label {
 	justify-content: center;
 	gap: 0;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center
 }
 h1 {
 	font-size: 60px;
@@ -259,8 +252,7 @@ img.star {
 	justify-content: center;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"] {
 	width: 50%;
 	background-color: var(--inputbg);
 	box-sizing: border-box;
@@ -275,8 +267,7 @@ input[type="password"] {
 	transition: opacity 0.25s ease-in-out;
 	opacity: 100%;
 }
-input[type="text"]:hover,
-input[type="password"]:hover {
+input[type="text"]:hover {
 	opacity: 80%;
 }
 ::placeholder {
@@ -355,11 +346,9 @@ label {
 	width: 30vw;
 	font-size: 16px;
 }
-.usericon {
-	width: 24px;
-	height: 24px;
-	align-self: right;
-	/* display: none; */
+#status {
+	position: absolute;
+	right: 2%;
 }
 #toast {
 	position: fixed;
@@ -394,262 +383,11 @@ label {
 	height: 56px;
 	z-index: 199975;
 	border-radius: 100%;
-	background-image: url("/img/discord.svg");
+	background-image: url("/img/discord-mark-white.png");
 	background-size: 60%;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-width: 0;
-}
-
-div.profile.top {
-	width: 90%;
-	height: 20vh;
-	background-color: var(--uibg);
-	border-radius: 10px;
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	box-shadow: 0px 0px 5px 5px var(--uibg);
-}
-div.profile.top.text {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: auto;
-	justify-self: center;
-	height: auto;
-	margin: 30px;
-	max-width: 40%;
-}
-
-div.profile.top.text.right {
-	margin-left: auto;
-	margin-right: 80px;
-}
-
-div.profile.top.text h1 {
-	font-size: 2vw;
-}
-div.profile.top.text h2 {
-	font-size: 1.25vw;
-}
-div.profile.top.text a {
-	font-size: 1.25vw;
-}
-
-img.pfp {
-    height: 80%;
-	object-fit: contain;
-	width: auto;
-	margin: 30px;
-	border-radius: 20px;
-	aspect-ratio: 1 / 1;
-}
-div.profile.top.text .about {
-	height: auto;
-	max-width: 100%;
-}
-
-#edit {
-	cursor: pointer;
-	position: relative;
-	height: 2vw;
-	margin-left: 5px;
-	width: auto;
-}
-#counter {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-#popup {
-	width: 50%;
-	height: 40%;
-	z-index: 99999999;
-	position: absolute;
-	position: absolute;
-	top: 50%;
-	left: 50vw;
-	transform: translate(-50%, -50%);
-	display: flex;
-	flex-direction: column;
-	background-color: var(--inputbg);
-	border-color: var(--inputborder);
-	border-width: 5px;
-	border-radius: 10px;
-	border-style: solid;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0px 0px 5px 5px var(--uibg);
-}
-#popup input {
-	width: 90%;
-	height: 30%;
-}
-#popup input[type=file] {
-	height: auto;
-	text-align-last: center;
-	display: block;
-	margin: 30px;
-}
-#popup h1 {
-	font-size: 32px;
-}
-
-#popup #close {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	
-}
-img.badges {
-	position: relative;
-	height: 2vw;
-	margin-left: 5px;
-	width: auto;
-}
-
-p#counter {
-	bottom: 38%;
-	right: 7%;
-}
-
-
-.users {
-	text-decoration: none;
-	width: 30%;
-	height: 10vh;
-	background-color: var(--uibg);
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0px 0px 5px 5px var(--uibg);
-	margin: 1.5%;
-}
-.users h1, .users p {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	justify-self: center;
-	height: auto;
-	max-width: 100%;
-	margin: auto;
-}
-.user_info {
-	width: 100%;
-}
-
-.users h1 {
-	font-size: 1vw;
-}
-.users p {
-	font-size: 0.75vw;
-}
-.users a {
-	font-size: 0.75vw;
-	text-decoration: underline;
-}
-
-.users p {
-	height: auto;
-	max-width: 100%;
-}
-#users {
-	width: 95%;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	flex-direction: row;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.pages-btn {
-	margin: 10px;
-}
-#ai {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-
-div.profile.played {
-	margin: 40px;
-	width: 90%;
-	height: auto;
-	padding: 30px;
-	background-color: var(--uibg);
-	border-radius: 10px;
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	box-shadow: 0px 0px 5px 5px var(--uibg);
-	justify-content: center;
-    flex-wrap: wrap;
-	
-}
-#played-games {
-	width: 100%;
-	display: flex;
-    flex-wrap: wrap;
-	justify-content: center;
-}
-div.played-game {
-	width: 13%;
-	height: auto;
-	margin: 2%;
-	padding: 0;
-}
-div.played-game img {
-	aspect-ratio: 1 / 1;
-	border-radius: 20px;
-}
-.friend-icon {
-	width: 5%;
-	position: absolute;
-	left: 2%;
-}
-#chat {
-	width: 90%;
-	background-color: var(--uibg);
-	height: calc(100vh - (var(--margin) * 2) - 60px - 24px - 24px - 30px);
-}
-#messages {
-	align-items: end;
-	flex-direction: column;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	height: 90%;
-	display: flex;
-}
-message {
-	width: calc(100% - 20px);
-	padding: 20px;
-	margin: 10px;
-	background-color: var(--inputbg);
-	border-radius: 10px;
-}
-message h1 {
-	font-size: 40px;
-}
-message h2 {
-	font-size: 32px;
-}
-message.user {
-	background-color: var(--inputborder);
-}
-message.bot {
-	justify-self: right;
-}
-#chatbox {
-	width: calc(100% - 20px);
-}
-.messagebox {
-	width: 100%;
-	height: 10%;
 }
 @keyframes toastFade {
 	0% {
