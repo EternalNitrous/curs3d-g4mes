@@ -52,7 +52,7 @@ body[theme=main] {
     /* text */
     --shadow: 0px 0px 4px #1d1d1d;
     /* surface 0 */
-        --bg: url("/img/backgrounds/background.gif"), #2a283c;
+        --bg: url("/img/backgrounds/background.jpg"), #2a283c;
 
 }
 body[theme=light] {
